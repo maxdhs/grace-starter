@@ -7,6 +7,8 @@ const app = express();
 
 app.use("/api", apiRouter);
 
+// they've been putting some code here
+
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
