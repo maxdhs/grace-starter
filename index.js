@@ -1,3 +1,14 @@
 // GET /api/books
 
-// we want to save our code with version control - git - and be able to collarboate with each other easily
+const express = require("express");
+const apiRouter = require("./api");
+
+const app = express();
+
+app.use("/api", apiRouter);
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log("Server is up on ", PORT);
+});
